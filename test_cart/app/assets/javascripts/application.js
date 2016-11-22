@@ -14,3 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+
+function myFunction() {
+    document.getElementById("s").style.color = "red";
+}

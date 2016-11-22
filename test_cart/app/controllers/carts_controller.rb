@@ -4,6 +4,8 @@ class CartsController < ApplicationController
   # GET /carts
   def index
     @carts = Cart.all
+    puts @carts.flat_map
+
   end
 
   # GET /carts/1
@@ -13,17 +15,19 @@ class CartsController < ApplicationController
   # GET /carts/new
   def new
     @cart = Cart.new
+
+
   end
 
-  # GET /carts/1/edit
-  def edit
-  end
 
   # POST /carts
   def create
     @cart = Cart.new(cart_params)
 
     if @cart.save
+      puts @cart
+      arr=[]
+      #@cart.each{|k,v|puts arr[k], arr[v] }
       redirect_to @cart, notice: 'Cart was successfully created.'
     else
       render :new
