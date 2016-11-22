@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :cart do
-    product_name "MyString"
-    category "MyString"
+    product_name {"ProductName#{SecureRandom.hex}"}
+    category {"CategorName#{SecureRandom.hex}"}
   end
 end
