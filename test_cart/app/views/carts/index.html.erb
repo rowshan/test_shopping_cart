@@ -3,7 +3,7 @@
 <h1>Carts</h1>
 <%#= render 'carts/form' %>
 
-<table>
+<table id="t">
   <thead>
     <tr>
       <th>Product name</th>
@@ -17,8 +17,8 @@
       <tr>
         <td><%= cart.product_name %></td>
         <td><%= cart.category %></td>
-
-        <td><%= link_to 'Destroy', cart_path(cart), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to 'Destroy', cart_path(cart), method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
       </tr>
     <% end %>
   </tbody>

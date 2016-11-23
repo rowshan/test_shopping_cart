@@ -1,6 +1,6 @@
-<%= form_for(@carts) do |f| %>
-
-  <div class="field">
+<%= form_for(@cart) do |f| %>
+<div id="form">
+  <div class="field" id="n">
     <%= f.label :product_name %>
     <%= f.text_field :product_name %>
   </div>
@@ -13,4 +13,5 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+</div>
 <% end %>

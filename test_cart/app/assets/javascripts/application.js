@@ -15,8 +15,11 @@
 //= require turbolinks
 //= require_tree .
 
-
-
-function myFunction() {
-    document.getElementById("s").style.color = "red";
+// validation form in order to add a new item in the cart
+function validateForm() {
+    var x = document.forms["form"]["n"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
 }
