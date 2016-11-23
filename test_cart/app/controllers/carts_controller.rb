@@ -25,8 +25,8 @@ class CartsController < ApplicationController
     @cart = Cart.new(cart_params)
 
     if @cart.save
-      puts @cart
-      arr=[]
+     # puts @cart
+      #arr=[]
       #@cart.each{|k,v|puts arr[k], arr[v] }
       redirect_to @cart, notice: 'Cart was successfully created.'
     else
@@ -35,13 +35,13 @@ class CartsController < ApplicationController
   end
 
   # PATCH/PUT /carts/1
-  def update
-    if @cart.update(cart_params)
-      redirect_to @cart, notice: 'Cart was successfully updated.'
-    else
-      render :edit
-    end
-  end
+  # def update
+  #   if @cart.update(cart_params)
+  #     redirect_to @cart, notice: 'Cart was successfully updated.'
+  #   else
+  #     render :edit
+  #   end
+  # end
 
   # DELETE /carts/1
   def destroy
