@@ -52,7 +52,7 @@ th, td {
     border-bottom: 1px solid #ddd;
 }
 
-tr:hover{background-color:red}
+td:hover{background-color:grey}
 th {
     background-color: #4CAF50;
     color: white;

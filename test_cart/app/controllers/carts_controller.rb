@@ -28,25 +28,17 @@ class CartsController < ApplicationController
      # puts @cart
       #arr=[]
       #@cart.each{|k,v|puts arr[k], arr[v] }
-      redirect_to @cart, notice: 'Cart was successfully created.'
+      redirect_to @cart, notice: @cart.product_name + ' was successfully created.'
     else
       render :new
     end
   end
 
-  # PATCH/PUT /carts/1
-  # def update
-  #   if @cart.update(cart_params)
-  #     redirect_to @cart, notice: 'Cart was successfully updated.'
-  #   else
-  #     render :edit
-  #   end
-  # end
 
   # DELETE /carts/1
   def destroy
     @cart.destroy
-    redirect_to carts_url, notice: 'Cart was successfully destroyed.'
+    redirect_to carts_url,  notice: @cart.product_name + ' was successfully destroyed.'
   end
 
   private

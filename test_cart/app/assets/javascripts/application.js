@@ -22,7 +22,16 @@ function validateForm() {
         alert("Name must be filled out");
         return false;
     }
+
+}
+
+// button
+function myFunction() {
+    document.getElementById("myForm");
 }
 
 
-
+// alert delete a cart item
+function deleteFunction() {
+    alert("Are your sure?");
+}
