@@ -17,9 +17,12 @@
 
 // validation form in order to add a new item in the cart
 function validateForm() {
-    var x = document.forms["form"]["n"].value;
+    var x = document.forms["myForm"]["nName"].value;
     if (x == "") {
         alert("Name must be filled out");
         return false;
     }
 }
+
+
+

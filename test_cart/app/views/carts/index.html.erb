@@ -1,9 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Carts</h1>
-<%#= render 'carts/form' %>
-
-<table id="t">
+<h1> Shopping Cart</h1>
+<table id="myTable">
   <thead>
     <tr>
       <th>Product name</th>
@@ -12,13 +10,12 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody id="tBody">
     <% @carts.each do |cart| %>
       <tr>
         <td><%= cart.product_name %></td>
         <td><%= cart.category %></td>
-        <td>
-          <%= link_to 'Destroy', cart_path(cart), method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+        <td><%= link_to 'Destroy', cart_path(cart), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
