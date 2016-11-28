@@ -1,21 +1,24 @@
 class CartsController < ApplicationController
-  before_action :set_cart, only: [:show, :edit, :update, :destroy]
+  before_action :set_cart, only: [:show, :destroy]
 
   # GET /carts
   def index
     @carts = Cart.all
-    puts @carts.flat_map
+    render json: @carts
+
 
   end
 
   # GET /carts/1
   def show
+    render json: @cart
+
   end
 
   # GET /carts/new
   def new
     @cart = Cart.new
-
+    render json: @cart
 
   end
 
@@ -25,9 +28,7 @@ class CartsController < ApplicationController
     @cart = Cart.new(cart_params)
 
     if @cart.save
-     # puts @cart
-      #arr=[]
-      #@cart.each{|k,v|puts arr[k], arr[v] }
+      render json: @carts
       redirect_to @cart, notice: @cart.product_name + ' was successfully created.'
     else
       render :new
